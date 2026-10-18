@@ -1,0 +1,4 @@
+# Pointer. The canonical manifest is docs/SOURCE_MANIFEST.yaml.
+# Do not add a second list of SHAs here.
+schema: autonomousos.source-manifest-pointer/v0
+canonical: docs/SOURCE_MANIFEST.yaml

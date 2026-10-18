@@ -32,6 +32,19 @@ The org-boot governor kept committing while this audit was open. These later rea
 
 This audit did not start, stop, or edit that governor. Rally's sprint was left alone. Any SHA above can already be stale.
 
+## Observation at the start of the blueprint-gap pass
+
+`2026-10-18T00:31:51Z`:
+
+- VentureOS org-boot `60704c87ea56d7987a6c4bfe05a178a4df59ee0f`, ahead 15 of origin. Status header showed no dirty line in the first screen.
+- Rally org-boot `aa304f15d1cf1e21d77e72dd418b8bf5e215d369`, ahead 30 of origin.
+- Mission-control still `4b119d3`, still dirty.
+- Council Lab still `dec2aae`. Engineering Runtime still `21bac4c`.
+
+These are not adoption pins.
+
+Closing read `2026-10-18T00:39:21Z`: VentureOS org-boot still `60704c8`, ahead 15. Rally org-boot still `aa304f1`, ahead 30. Mission-control still `4b119d3` and dirty. No source file in those repos was edited by this pass.
+
 ## Engineering Runtime identity
 
 No directory named FDE was found as a product repository. GitHub repository search under `xcross20` returned no repository named `fde`. The runtime that contains bounded process execution is **engineeringruntime**. A private repository under another name remains **UNKNOWN**.

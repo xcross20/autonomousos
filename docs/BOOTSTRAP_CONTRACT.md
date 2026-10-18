@@ -30,7 +30,13 @@ Missing input is a blocker, not a guessed mission.
 
 Research ventures may add `docs/RESEARCH_PROTOCOL.md`. The engineering loop does not require it.
 
-## Commands
+## Commands that exist today
+
+`apps/cli/src/index.ts` at VentureOS `4b119d3` is a client of the control-plane API. The help text includes `venture init`, `venture doctor`, `venture project add`, `venture project assimilate`, `venture work create`, and `venture work green`. `venture init` only prints a hint to start `npm run dev:api`. It does not write mission files. `venture doctor` calls `/health` and `/api/providers`. It does not scan a repo for a dirty tree.
+
+`venture org init` is not in that file. `venture work start <cell>` is a handler and is not in the help text. It POSTs `/api/work-cells/<id>/start`. It does not accept `--mission` and it does not enqueue the portfolio governor. The contract command `venture work start --mission first-slice` is still only a proposal.
+
+## Commands to add only after Gate C
 
 ```
 venture org doctor --repo <path>

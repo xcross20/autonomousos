@@ -52,4 +52,28 @@ Do not start. Human acceptance of Gates A–C is not in this packet. The live qu
 
 ## Tests this review did not run
 
-VentureOS vitest, Council Lab unittest, Rally product tests, and the org-boot governor process. The reviewer did not re-run pytest.
+The first reviewer did not run VentureOS vitest, Council Lab unittest, Rally product tests, or the org-boot governor. The reviewer did not re-run pytest.
+
+## Blueprint-gap pass, before the second review
+
+Isolated from the live trees:
+
+- Archive of VentureOS `4b119d3`, `npx vitest run tests/acceptance/background-autonomy-portfolio-governor.test.ts`: **17 passed**, vitest 3.2.7, exit 0. `node_modules` was a symlink to the existing checkout. Source status stayed dirty only on the files that were already dirty.
+- Archive of Council Lab `dec2aae`, venv install, `unittest discover`: **116 tests, OK, 9.370s**. Not an oracle-boundary acceptance.
+- Live HEADs at `2026-10-18T00:31:51Z` and `2026-10-18T00:39:21Z` were the same: org-boot `60704c8`, Rally `aa304f1`.
+
+New pages: `docs/CAPABILITY_MATRIX.md`, `docs/DUPLICATION_REGISTER.md`, `docs/MIGRATION_DECISIONS.md`, `docs/OPERATOR_RUNBOOK.md`, `docs/BRANCH_MATRIX.md`, `docs/PROMPT_INVENTORY.md`, `docs/BLUEPRINT_COVERAGE.md`. Root `SOURCE_MANIFEST.yaml` only points at `docs/SOURCE_MANIFEST.yaml`.
+
+Gate D is still not started. `venture org init` is still not a real command.
+
+## Second review
+
+Reviewer session `01a14c73-74fd-7751-9ffc-21d97161e475` returned **CHANGES_REQUIRED**. Gate D must not start.
+
+The reviewer checked the discovery checklist rows, the role-prompt map, both `010_` migrations, `recoverStale`, and the live HEADs at `2026-10-18T00:40:41Z` (`60704c8` and `aa304f1`, unchanged). Those checks held.
+
+One false sentence: the bootstrap contract said `venture work start` was absent from `apps/cli/src/index.ts`. The help text omits it. The handler at line 155 is `work` + `start` and POSTs `/api/work-cells/${id}/start`. It is not `venture work start --mission`. The contract and the runbook were corrected from that file after the review. The correction was not re-reviewed.
+
+## Decision
+
+Documentation packet is **READY_FOR_HUMAN_REVIEW** with that one correction unreviewed. The organization is not built. Gate D is not authorized. Founder decisions R1–R6 stay open.
