@@ -1,14 +1,17 @@
-# Product repo template — draft
+# Product repository template
 
-Potential minimal structure, subject to inventory reconciliation:
+Not a registered project. Do not copy these files into Rally, VentureOS, Council Lab, or Engineering Runtime during ORG-CONSOLIDATE-001.
 
-- AGENTS.md
-- .ventureos/project.yaml
-- docs/MISSION.md
-- docs/PRODUCT.md
-- docs/NEXT.md
-- docs/STATE.md
-- src/
-- tests/
+After Gate C is accepted, `venture org init` may create:
 
-STATE.md should project the governor's durable truth, not maintain an independent queue.
+- `AGENTS.md`
+- `.ventureos/project.yaml` (see `project.example.yaml`)
+- `docs/MISSION.md`
+- `docs/PRODUCT.md`
+- `docs/STRATEGY.md`
+- `docs/RETHINK.md`
+- `docs/NEXT.md`
+- `docs/STATE.md` as a projection, never as a queue
+- `src/` and `tests/` only when the mission names a first slice
+
+`project.example.yaml` is an example document. It does not register a project.

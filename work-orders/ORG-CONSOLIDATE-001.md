@@ -25,3 +25,6 @@ All source repositories are read-only in this phase. Do not move or copy source 
 
 ## Acceptance
 Independent reviewer checks the inventory against source files, confirms overlapping responsibilities and flags inaccessible local evidence. The result is READY_FOR_HUMAN_REVIEW, not automatic acceptance. Stop before runtime migration.
+
+## Phase 0 record
+The discovery packet is the `docs/` set listed in the README, plus `QA_REPORT.md`. Gate D has not started.

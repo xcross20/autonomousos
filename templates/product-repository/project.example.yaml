@@ -1,0 +1,15 @@
+# Example only. venture org init does not exist yet.
+# Do not point a governor at this file.
+schema: autonomousos.project/v0
+status: example-not-registered
+project_id: example-unset
+mission_file: docs/MISSION.md
+runtime_adapter: org-boot-spawnSync-fallback
+runtime_notes: ERT run_bounded is blocked while R11-001 is open
+protected_branches:
+  - main
+strategic_authority: proposal-only
+budget:
+  daily_usd: unset
+  job_timeout_sec: unset
+idempotency: a second init must not create a second project or a second job

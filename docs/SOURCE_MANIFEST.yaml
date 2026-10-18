@@ -1,0 +1,80 @@
+# Machine-readable pins for ORG-CONSOLIDATE-001.
+# Confidence is VERIFIED only for objects this session read.
+# This file authorizes nothing.
+schema: autonomousos.source-manifest/v0
+inspected_at: "2026-10-17"
+blueprint: "Downloads/autonomous_organization_consolidation_blueprint (1).docx"
+blueprint_format: docx
+phase: discovery
+code_migration: forbidden
+
+repositories:
+  - id: autonomousos
+    url: https://github.com/xcross20/autonomousos
+    path: /Users/immanuellewis/worktrees/autonomousos
+    branch: feat/org-consolidate-001-foundation
+    head_before_this_audit: 2f61e001981df55576f587df39e6a1b6fdc34aa2
+    main: 4c6076dc32c679c587cfbdf952adad01ea841854
+  - id: ventureos-mission-control
+    url: https://github.com/xcross20/ventureos
+    path: /Users/immanuellewis/ventureos
+    branch: feat/mission-control-v2
+    head: 4b119d39d4ad71f7ff8a96a0ca7c22537f3fc1aa
+    dirty_paths: 29
+    use_as_source: committed tree only
+  - id: ventureos-org-boot
+    url: https://github.com/xcross20/ventureos
+    path: /Users/immanuellewis/worktrees/ventureos-org-boot
+    branch: feat/org-boot-001-ventureos
+    snapshot_head: b5a280a916111777cc6a2e22184367788c59c99c
+    origin_at_snapshot: 2d22aaf3f913940552bc0dd35748b3f82c3f00ad
+    ahead_at_snapshot: 6
+    dirty_at_snapshot: false
+    live: true
+    note: HEAD advanced during review. See REPOSITORY_LEDGER.md. Do not adopt a moving SHA.
+  - id: rally-live
+    url: https://github.com/xcross20/rally_top_signal_tester
+    path: /Users/immanuellewis/rally_top_signal_tester
+    branch: feat/rally-live-workbench-slice
+    head: 3e74c6ea0d84bc734deeccb5b20c86c6be8d45de
+    note: leave uninterrupted
+  - id: rally-org-boot
+    url: https://github.com/xcross20/rally_top_signal_tester
+    path: /Users/immanuellewis/worktrees/rally-org-boot
+    branch: feat/org-boot-001-rally
+    snapshot_head: 210bbbca6ef4b7cfed148bc31b03d8ca061f4cda
+    origin_at_snapshot: c1a8c1232e67a7bcc03cd891569ecaf9eec22eca
+    ahead_at_snapshot: 12
+    live: true
+    note: HEAD advanced during review. See REPOSITORY_LEDGER.md.
+  - id: council-lab
+    url: https://github.com/xcross20/Council_lab
+    path: /Users/immanuellewis/worktrees/Council_lab
+    branch: feat/cl-rel-003a-development-comparison
+    head: dec2aae8d161935fa012dc556d93274f9ba9c453
+    pushed: false
+    remote_main: 207aaf858b7fd44d0c1cc68b374d213983f0a878
+  - id: engineeringruntime
+    url: https://github.com/xcross20/engineeringruntime
+    path: /Users/immanuellewis/worktrees/engineeringruntime
+    branch: feat/ert-002c-railway-infrastructure
+    head: 21bac4c9ba24db6b47c433440ddb1bf071ca634f
+    pushed: false
+    origin_main: 78033ba22bf1a719821c2b6a2ae12b188e0eef72
+    fde_alias: none_found
+
+blockers:
+  - id: R11-001
+    repo: engineeringruntime
+    status: unresolved
+    candidate: ef4fda796c03ed0ffc7104836849c03789c237be
+    statement: A descendant that closes inherited descriptors, drops ERT_RUN_ID, and leaves the command directory can survive run_bounded.
+  - id: ERT-002-ACCEPTANCE
+    status: not_accepted
+    stage: ERT-002_IMPLEMENTED_NOT_ACCEPTED
+  - id: ERT-002C-CONTAINMENT
+    status: UNVERIFIED
+    trials_executed: 0
+  - id: LICENSE
+    status: no LICENSE file in the four product/runtime repos
+    effect: no code copy in this phase

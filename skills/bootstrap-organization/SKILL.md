@@ -1,13 +1,20 @@
-# Bootstrap Organization — proposed skill (not active)
+# Bootstrap Organization
 
-Goal: turn a founder's brief and a target repository into a customer-visible, bounded first vertical slice.
+Status: inactive instructions. Contract: `docs/BOOTSTRAP_CONTRACT.md`. Do not enqueue work, launch an agent, spend money, or edit a product repository from this skill.
 
-1. Establish user, problem, customer journey, success evidence and constraints.
-2. Inspect existing repository without overwriting its architecture.
-3. Produce mission, product contract, NEXT work and state projection.
-4. Register the project with the canonical governor once verified.
-5. Require authorization before running Builder or using paid tools.
-6. Execute bounded build, independent review and evidence-backed decision through the canonical runtime.
-7. Return a browser-verifiable result and proposed next mission.
+## When a human has accepted Gates A–C
 
-The skill is instructions only; it must never implement its own alternate governor. Activation waits for accepted inventory and runtime contracts.
+1. Read the mission file. If the user, problem, first journey, or acceptance check is missing, stop and name the gap.
+2. Run the read-only doctor against the target repo. Refuse `main`, a dirty allowed path, and inherited secrets.
+3. Show the project file set and the single first job. Wait for an explicit approval before any write.
+4. Register through the VentureOS portfolio governor. Do not write a second queue.
+5. Start one non-strategic job. The builder and the reviewer are different sessions. The reviewer sees the diff.
+6. Report the decision event, the blocker, or IDLE. A rethink proposal is text until a human approves it.
+
+## Forbidden
+
+- A private scheduler, `queue.json`, or job state file in this skill.
+- `--always-approve`, `bypassPermissions`, or a paid launch.
+- Selecting Engineering Runtime as the adapter while R11-001 is open.
+- Copying Rally, Council Lab, or VentureOS packages.
+- Treating this file as evidence that a slice shipped.
