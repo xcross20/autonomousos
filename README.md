@@ -37,8 +37,31 @@ Inventory the source-of-truth implementations and prove their provenance; then c
 - https://github.com/xcross20/ventureos
 - https://github.com/xcross20/rally_top_signal_tester
 - https://github.com/xcross20/Council_lab
-- Engineering Runtime / FDE: confirm repository URL and local branches during discovery.
+- https://github.com/xcross20/engineeringruntime (no separate FDE repository was found)
 
 ## Status
 
-Bootstrap scaffold only. No production execution capability has been claimed or validated here.
+Phase 0 inventory plus the blueprint freeze pages are on this branch. Two independent reviews are in `QA_REPORT.md`. The packet is ready for a human to read. The organization has not been built, migrated, or deployed. Gate D has not started. Live org-boot SHAs are observations, not adoption pins.
+
+Read, in order:
+
+- `docs/REPOSITORY_LEDGER.md`
+- `docs/COMPONENT_INVENTORY.md`
+- `docs/MIGRATION_MATRIX.md`
+- `docs/ARCHITECTURE.md`
+- `docs/DECISIONS.md`
+- `docs/INTEGRATION_PLAN.md`
+- `docs/BOOTSTRAP_CONTRACT.md`
+- `docs/VALIDATION_PLAN.md`
+- `docs/EFFICIENCY_BASELINE.md`
+- `docs/SOURCE_MANIFEST.yaml` (root `SOURCE_MANIFEST.yaml` points here)
+- `docs/CAPABILITY_MATRIX.md`
+- `docs/DUPLICATION_REGISTER.md`
+- `docs/MIGRATION_DECISIONS.md`
+- `docs/OPERATOR_RUNBOOK.md`
+- `docs/BRANCH_MATRIX.md`
+- `docs/PROMPT_INVENTORY.md`
+- `docs/BLUEPRINT_COVERAGE.md`
+- `QA_REPORT.md`
+
+Canonical code host proposed in ADR-001: VentureOS. This repository is the audit. Engineering Runtime is `https://github.com/xcross20/engineeringruntime`. ERT-002 is not accepted. R11-001 is unresolved. Do not deploy.
